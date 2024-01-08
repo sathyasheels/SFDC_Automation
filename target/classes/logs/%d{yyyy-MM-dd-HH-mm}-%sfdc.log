@@ -1,0 +1,15 @@
+2024-01-07-17:26:50 INFO  Edge browser is configured
+2024-01-07-17:26:57 INFO  Test case-8 usermenu option is clicked
+2024-01-07-17:26:57 INFO  Test case-8 Usermenu items verified
+2024-01-07-17:26:57 INFO  Corresponding usermenu optin is clicked
+2024-01-07-17:26:57 INFO  Test case-8 Developer console option is selected
+2024-01-07-17:27:03 INFO  Parent window is captured
+2024-01-07-17:27:03 INFO  WebDriver switches to the child window
+2024-01-07-17:27:03 INFO  Child window is closed
+2024-01-07-17:27:03 INFO  Test case-8 is working as expected
+2024-01-07-17:27:06 INFO  Edge browser is configured
+2024-01-07-17:27:12 INFO  Test case 9-Usermenu is clicked
+2024-01-07-17:27:12 INFO  Corresponding usermenu optin is clicked
+2024-01-07-17:27:12 INFO  Test case 9-Logout option is selected
+2024-01-07-17:27:18 INFO  Login page is displayed
+2024-01-07-17:27:18 INFO  Test case 9 is successfully executed
