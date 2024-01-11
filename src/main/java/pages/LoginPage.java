@@ -87,6 +87,9 @@ public class LoginPage {
 	public String getUserName() {
 		return username.getText();
 	}
+	public String getUserName(String name) {
+		return username.getAttribute(name);
+	}
 	public String getPassword() {
 		return password.getText();
 	}
