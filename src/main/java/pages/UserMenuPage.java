@@ -21,7 +21,8 @@ import org.apache.logging.log4j.Logger;
 public class UserMenuPage extends BasePage{
 	
 	public UserMenuPage(WebDriver driver){
-		PageFactory.initElements(driver,this);
+		super(driver);
+		//PageFactory.initElements(driver,this);
 	}
 	
 	@FindBy(xpath="//span[@class='menuButtonLabel']")
