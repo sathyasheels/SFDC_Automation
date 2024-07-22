@@ -54,6 +54,9 @@ public static void mouseHover(WebDriver driver,WebElement element) {
 public static void selectDropDown(WebElement element, String text) {
 	Select select=new Select(element);
 	select.selectByVisibleText(text);
+	//select.selectByValue(text);
+	//select.selectByIndex(1);
+
 }
 
 public static String selectDefaultView(WebElement element) {

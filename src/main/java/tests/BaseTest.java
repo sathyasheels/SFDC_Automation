@@ -2,8 +2,10 @@ package tests;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
@@ -46,6 +48,9 @@ public class BaseTest {
 		{
 		case "chrome":
 			driver=new ChromeDriver();
+			ChromeOptions co=new ChromeOptions();
+			Cookie cookie=new Cookie(browser, browser);
+		
 			logger.info("Chrome browser is configured");
 			break;
 		case "firefox":

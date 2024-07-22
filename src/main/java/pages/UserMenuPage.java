@@ -202,6 +202,7 @@ public class UserMenuPage extends BasePage{
 		if(postLink.isDisplayed()) {
 			postLink.click();
 			driver.switchTo().frame(postTextIframe);
+			//driver.switchTo().fr
 			textToPost.sendKeys(message);
 			driver.switchTo().defaultContent();
 			if(sharePostButton.isDisplayed()) {
