@@ -24,7 +24,7 @@ public class UserMenuPage extends BasePage{
 		PageFactory.initElements(driver,this);
 	}
 	
-	@FindBy(xpath="//span[@class='menuButtonLabel']")
+	@FindBy(xpath="//span[@id='userNavLabel']")
 	public WebElement userMenu;
 	
 	@FindBy(xpath="//div[@id='userNav-menuItems']/a")

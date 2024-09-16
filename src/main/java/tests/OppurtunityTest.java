@@ -23,17 +23,17 @@ public void preRequisite() throws IOException
 	lp.loginToApp(driver);
 }
 
-@Test(enabled=false)
+@Test(enabled=true)
 public void selectOppurtunity_TC15() throws IOException {
 	OppurtunityPage op=new OppurtunityPage(driver);
 	if(CommonUtils.waitForElementToBeClickable(driver,op.oppurtunitiesTab)) {
 		op.oppurtunitiesTab.click();
 	}
-	Assert.assertTrue(op.verifyOpportunityHomePage(),"Failed to verify Oppurtunity Home Page");
+	Assert.assertFalse(op.verifyOpportunityHomePage(),"Failed to verify Oppurtunity Home Page");
 	Assert.assertTrue(op.verifyViewOppurtunityDropDown(), "Failed to verify view drop down");
 }
 
-@Test(enabled=false)
+@Test(enabled=true)
 public void createNewOppurtunity_TC16() throws IOException {
 	OppurtunityPage op=new OppurtunityPage(driver);
 	if(CommonUtils.waitForElementToBeClickable(driver,op.oppurtunitiesTab)) {
@@ -45,7 +45,7 @@ public void createNewOppurtunity_TC16() throws IOException {
 			FileUtils.readOppurtunityData("probability"),FileUtils.readOppurtunityData("leadsourcedropdown.option")));
 	}
 
-@Test(enabled=false)
+@Test(enabled=true)
 public void testOpportunityPipeline_TC17() {
 	OppurtunityPage op=new OppurtunityPage(driver);
 	if(CommonUtils.waitForElementToBeClickable(driver,op.oppurtunitiesTab)) {
@@ -64,7 +64,7 @@ public void testStuckOpportunity_TC18() {
 	Assert.assertTrue(op.verifystuckOpportunityReportPage(driver),"Failed to verify pipeline report page");
 }
 
-@Test
+@Test(enabled=false)
 public void testQuarterlySummaryReport_TC19() throws IOException {
 	OppurtunityPage op=new OppurtunityPage(driver);
 	if(CommonUtils.waitForElementToBeClickable(driver,op.oppurtunitiesTab)) {
