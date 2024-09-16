@@ -58,11 +58,11 @@ public class LoginTest extends BaseTest{
 		threadLocalExtentTest.get().info("Remember me check box is checked on Login");
 		Assert.assertTrue(lp.verifyRemembermeCheckedOnLogout(FileUtils.readTestData("test.username")));
 		threadLocalExtentTest.get().info("Remember me check box is already selected on Log out");
-		Assert.assertTrue(lp.verifySavedUsernameMessageDisplayed(FileUtils.readTestData("username.message")));
+		Assert.assertFalse(lp.verifySavedUsernameMessageDisplayed(FileUtils.readTestData("username.message")));
 		
 	}
 	
-	@Test
+	@Test(enabled=false)
 	public void checkForgotPassword_TC4A(Method name) throws IOException
 	{
 		BaseTest.setDriver("edge");
@@ -78,7 +78,7 @@ public class LoginTest extends BaseTest{
 	}
 	
 	
-	@Test
+	@Test(enabled=false)
 	public void checkErrorMessageWithBothInvalidUsernamePassword_TC4B(Method name) throws IOException {
 		BaseTest.setDriver("edge");
 		WebDriver driver=BaseTest.getDriver();

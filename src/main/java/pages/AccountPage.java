@@ -10,6 +10,8 @@ import utils.CommonUtils;
 import utils.FileUtils;
 
 public class AccountPage {
+	private WebDriver driver;
+	
 	public AccountPage(WebDriver driver){
 		PageFactory.initElements(driver,this);
 	}
@@ -25,6 +27,10 @@ public class AccountPage {
 	
 	
 	public boolean verifyUserNameInHomePage() {
+		ContactsPage cp=new ContactsPage(driver);
+		if(cp.getCancelButton().isDisplayed()) {
+			
+		}
 		boolean isUserNameInHomePageDisplayed=false;
 		if(accountsTab.isDisplayed()) {
 			accountsTab.click();

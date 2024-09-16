@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import pages.AccountPage;
+import pages.ContactsPage;
 import pages.LoginPage;
 import utils.FileUtils;
 
@@ -26,6 +27,7 @@ public class AccountTest extends BaseTest{
 	@Test(enabled=false)
 	public void createAccount_TC10() throws IOException {
 		AccountPage ap=new AccountPage(driver);
+		ContactsPage cp=new ContactsPage(driver);
 		Assert.assertTrue(ap.verifyUserNameInHomePage(),"Failed to verify Home Page");
 		Assert.assertTrue(ap.verifyAccountPageDisplayed(FileUtils.readAccountData("expected.accountname"),
 				FileUtils.readAccountData("typedropdown.option"), FileUtils.readAccountData("customerprioritydropdown.option")));

@@ -7,7 +7,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -49,16 +51,19 @@ public class BaseTest {
 		case "chrome":
 			driver=new ChromeDriver();
 			ChromeOptions co=new ChromeOptions();
+			
 			Cookie cookie=new Cookie(browser, browser);
 		
 			logger.info("Chrome browser is configured");
 			break;
 		case "firefox":
 			driver=new FirefoxDriver();
+			FirefoxOptions fo=new FirefoxOptions();
 			logger.info("firefox browser is configured");
 			break;
 		case "edge":
 			driver=new EdgeDriver();
+			EdgeOptions eo=new EdgeOptions();
 			logger.info("Edge browser is configured");
 			break;
 		default:

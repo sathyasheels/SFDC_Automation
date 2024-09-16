@@ -48,12 +48,16 @@ public static boolean waitForElementToDisappear(WebDriver driver, WebElement ele
 }
 public static void mouseHover(WebDriver driver,WebElement element) {
 	Actions action=new Actions(driver);
+	//driver.switchTo().parentFrame();
+	action.dragAndDrop(element, element);
+	action.clickAndHold(element);
 	action.moveToElement(element).build().perform();
 }
 
 public static void selectDropDown(WebElement element, String text) {
 	Select select=new Select(element);
 	select.selectByVisibleText(text);
+	
 	//select.selectByValue(text);
 	//select.selectByIndex(1);
 

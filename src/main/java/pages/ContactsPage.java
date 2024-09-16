@@ -184,7 +184,11 @@ public class ContactsPage {
 	
 	
 	@FindBy(xpath="//input[@data-uidsfdc='3']//following-sibling::input[@value='Cancel']")
-	public WebElement cancelButton;
+	private WebElement cancelButton;
+	
+	public WebElement getCancelButton() {
+		return cancelButton;
+	}
 	
 	public boolean verifyHomepageDisplayedOnclickingCancelButton(String viewname2,String viewUniqueName2) {
 		boolean isHomepageDisplayedOnclickingCancelButton=false;
